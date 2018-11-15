@@ -90,7 +90,7 @@ def calc_accuracy(output_op, prints=False):
 
     def print_result(i, p, q):
         for x in i:
-          print(list(x)[0])
+            print[(list(x)[0])],
         print("output: %f, correct: %d" % (p, q))
     if prints:
         [print_result(i, p, q) for i, p, q in zip(inputs, output[0], ts)]
@@ -143,4 +143,4 @@ with tf.Graph().as_default():
 
         calc_accuracy(output_op, prints=True)
         datas = sess.run(datas_op)
-        saver.save(sess, "model.ckpt")
+        #saver.save(sess, "model.ckpt")
