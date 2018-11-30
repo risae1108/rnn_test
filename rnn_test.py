@@ -7,7 +7,7 @@ num_of_input_nodes = 1
 num_of_hidden_nodes = 80
 num_of_output_nodes = 1
 length_of_sequences = 10
-num_of_training_epochs = 5000
+num_of_training_epochs = 10000
 size_of_mini_batch = 100
 num_of_prediction_epochs = 100
 learning_rate = 0.01
@@ -20,7 +20,6 @@ def get_batch(batch_size, X, t):
     xs = np.array([[[y] for y in list(X[r])] for r in rnum])
     ts = np.array([[t[r]] for r in rnum])
     return xs, ts
-
 
 def create_data(nb_of_samples, sequence_len):
     X = np.zeros((nb_of_samples, sequence_len))
